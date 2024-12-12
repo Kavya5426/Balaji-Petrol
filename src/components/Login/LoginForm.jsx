@@ -25,6 +25,8 @@ const LoginForm = () => {
       navigate('/manager-dashboard');
     } else if (role === 'admin' && username === 'admin' && password === 'password') {
       navigate('/admin-dashboard');
+    }else if (role === 'employee' && username === 'employee' && password === 'password') {
+      navigate('/employee-dashboard');
     } /*else {
       alert('Invalid Credentials or Role!');
     }*/
@@ -33,6 +35,7 @@ const LoginForm = () => {
     const exampleUsers = [
       { username: 'manager', password: 'manager123', role: 'manager' },
       { username: 'admin', password: 'admin123', role: 'admin' },
+      { username: 'employee', password: 'employee123', role: 'employee' },
     ];
 
     // Validate credentials
@@ -48,6 +51,8 @@ const LoginForm = () => {
         navigate('/manager-dashboard'); // Navigate to Manager Dashboard
       } else if (user.role === 'admin') {
         navigate('/admin-dashboard'); // Navigate to Admin Dashboard
+      } else if (user.role === 'employee') {
+        navigate('/employee-dashboard'); // Navigate to Employee Dashboard
       }
     } else {
       alert('Invalid username, password, or role!');
@@ -95,6 +100,7 @@ const LoginForm = () => {
                   <option value="">Select Role</option>
                   <option value="manager">Manager</option>
                   <option value="admin">Admin</option>
+                  <option value="employee">Employee</option>
                 </select>
               </label>
               <button type="submit">Login</button>

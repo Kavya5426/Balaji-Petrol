@@ -31,6 +31,7 @@ import LoginForm from './components/Login/LoginForm';
 import CreateAccount from './components/Login/CreateAccount';
 import ManagerDashboard from './components/ManagerDashboard/ManagerDashboard';
 import AdminDashboard from './components/AdminDashboard/AdminDashboard';
+import EmployeeDashboard from './components/EmployeeDashboard/EmployeeDashboard';
 
 
 const App = () => {
@@ -41,6 +42,7 @@ const App = () => {
         <Route path="/create-account" element={<CreateAccount />} />
         <Route path="/manager-dashboard" element={<ManagerDashboard />} />
         <Route path="/admin-dashboard" element={<AdminDashboard />} />
+        <Route path="/employee-dashboard" element={<EmployeeDashboard />} />
       </Routes>
     </Router>
   );

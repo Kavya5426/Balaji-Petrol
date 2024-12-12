@@ -55,6 +55,7 @@ const CreateAccount = () => {
             <option value="">Select Role</option>
             <option value="manager">Manager</option>
             <option value="admin">Admin</option>
+            <option value="employee">Employee</option>
           </select>
         </label>
         <button type="submit">Create Account</button>
