@@ -9,7 +9,6 @@
     "@testing-library/user-event": "^13.5.0",
     "docx": "^9.1.0",
     "file-saver": "^2.0.5",
-    "gh-pages": "^6.2.0",
     "html2canvas": "^1.4.1",
     "jspdf": "^2.5.2",
     "jspdf-autotable": "^3.8.4",
@@ -46,5 +45,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.2.0"
   }
 }
