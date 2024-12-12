@@ -34,7 +34,7 @@ import AdminDashboard from './components/AdminDashboard/AdminDashboard';
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/Balaji-Petrol">
       <Routes>
         <Route path="/" element={<LoginForm />} />
         <Route path="/create-account" element={<CreateAccount />} />
