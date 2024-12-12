@@ -1,0 +1,40 @@
+.redemption-section {
+    padding: 20px;
+  }
+  
+  .search-bar {
+    display: block;
+    width: 50%;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .customer-table,
+  .gift-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .customer-table th,
+  .customer-table td,
+  .gift-table th,
+  .gift-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .popup {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    background: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  

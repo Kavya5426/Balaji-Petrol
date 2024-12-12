@@ -1,0 +1,93 @@
+.duplicate-card-section {
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .fetch-details-form,
+  .block-card-form,
+  .generate-card-form {
+    margin-bottom: 20px;
+  }
+  
+  .fetch-details-form input,
+  .block-card-form input {
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  .form-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+  
+  .bill-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .bill-form label {
+    margin: 10px 0;
+  }
+  
+  .bill-form input {
+    padding: 5px;
+    margin-left: 10px;
+  }
+  
+  .bill {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: whitesmoke;
+    border: 1px solid #ccc;
+    width: 300px;
+  }
+  
+  
+  .bill h3, .bill h4 {
+    text-align: center;
+    margin: 0;
+  }
+  
+  .bill p {
+    margin: 10px 0;
+    font-size: 14px;
+  }
+  
+  .bill button {
+    margin: 10px 5px;
+  }
+  
+  
+  .customer-details {
+    margin-top: 20px;
+  }
+  
+  .generate-bill-btn {
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+  }
+  
