@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Balaji-Petrol/static/css/main.0f2d2235.css",
+    "main.js": "/Balaji-Petrol/static/js/main.5c5bbc9e.js",
+    "static/js/239.025d6a7b.chunk.js": "/Balaji-Petrol/static/js/239.025d6a7b.chunk.js",
+    "static/js/213.7cd23ffb.chunk.js": "/Balaji-Petrol/static/js/213.7cd23ffb.chunk.js",
+    "static/js/732.681d4667.chunk.js": "/Balaji-Petrol/static/js/732.681d4667.chunk.js",
+    "static/js/453.261a14bd.chunk.js": "/Balaji-Petrol/static/js/453.261a14bd.chunk.js",
+    "static/media/Login.png": "/Balaji-Petrol/static/media/Login.f2daa7d9f24a94f99ec7.png",
+    "index.html": "/Balaji-Petrol/index.html",
+    "main.0f2d2235.css.map": "/Balaji-Petrol/static/css/main.0f2d2235.css.map",
+    "main.5c5bbc9e.js.map": "/Balaji-Petrol/static/js/main.5c5bbc9e.js.map",
+    "239.025d6a7b.chunk.js.map": "/Balaji-Petrol/static/js/239.025d6a7b.chunk.js.map",
+    "213.7cd23ffb.chunk.js.map": "/Balaji-Petrol/static/js/213.7cd23ffb.chunk.js.map",
+    "732.681d4667.chunk.js.map": "/Balaji-Petrol/static/js/732.681d4667.chunk.js.map",
+    "453.261a14bd.chunk.js.map": "/Balaji-Petrol/static/js/453.261a14bd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0f2d2235.css",
+    "static/js/main.5c5bbc9e.js"
+  ]
+}
