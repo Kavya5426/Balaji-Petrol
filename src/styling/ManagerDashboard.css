@@ -3,6 +3,11 @@
   margin-bottom: 20px; /* Add spacing below the header */
 }
 
+body {
+  overflow-x: hidden; /* Globally disables horizontal scrolling */
+}
+
+
 
 * {
   margin: 0;
@@ -86,15 +91,15 @@
 
 /* Main Content Section */
 .content {
-  margin-left:0; /* Offset to avoid overlapping with the fixed sidebar */
+  margin-left:20%; /* Offset to avoid overlapping with the fixed sidebar */
   padding: 5px;
   overflow-y: auto;
   box-sizing: border-box;
-  width: 85%;
-  width:100vw;
+  background-color: #dbebfb;
+  width: 80%;
   scroll-behavior: smooth;
   height: 100vh;
-  overflow:hidden;
+  overflow-x:hidden;
 }
 
 /* Card Grid */
@@ -109,15 +114,25 @@
 /* Sections */
 .section {
   height: 100vh; /* Each section covers the full viewport height */
-  padding: 20px;
   background-color: #dbebfb;
-  border-bottom: 1px solid #ddd;
-  margin-left: 20%;
-  margin-right: 0px;
+  margin:0px;
+  padding:20px;
+  width:80vw;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing:border-box;
+
 }
 
 .main-section {
-  background-color: #eaf3fc; /* Different background for the main page */
+  height: 100vh; /* Each section covers the full viewport height */
+  background-color: #dbebfb;
+  margin:0px;
+  padding:20px;
+  width:80vw;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing:border-box; /* Different background for the main page */
 }
 
 .section h1 {
@@ -208,10 +223,14 @@
   top: 5px;
   left: 10px;
   font-size: 34px;
-  color: #fb9f00;
-  font-weight: 700;
+  color:#009bfb;
+  font-weight:normal;
+  background-color: #052f99;
+  border-radius:5px;
+  text-align:center;
+  padding:2px 1px;
   cursor: pointer;
-  border:#fb9f00;
+  border-color:#fb9f00;
   z-index: 1000; /* Ensures it stays on top */
   transition: background-color 0.3s, transform 0.2s;
 }

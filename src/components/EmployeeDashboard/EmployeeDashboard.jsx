@@ -4,6 +4,7 @@ import "../../styling/ManagerDashboard.css";
 import DuplicateCardSection from "../ManagerDashboard/DuplicateCardSection"; // Import the component
 import Redemption from "../ManagerDashboard/Redemption";
 import Report from "../ManagerDashboard/Report";
+import GiftReport from "../EmployeeDashboard/GiftReport";
 
 
 const EmployeeDashboard = () => {
@@ -13,6 +14,8 @@ const EmployeeDashboard = () => {
   const duplicateCardRef = useRef(null);
   const redemptionRef = useRef(null);
   const reportRef = useRef(null);
+  const giftreportref =useRef(null);
+
 
   // Function to scroll to the specific section
   const scrollToSection = (ref) => {
@@ -38,6 +41,9 @@ const EmployeeDashboard = () => {
         </div>
         <div className="dashboard-item" onClick={() => scrollToSection(redemptionRef)}>
           Redemption
+        </div>
+        <div className="dashboard-item" onClick={() => scrollToSection(giftreportref)}>
+          Gift Report
         </div>
         <div className="dashboard-item" onClick={() => scrollToSection(reportRef)}>
           Report
@@ -83,6 +89,9 @@ const EmployeeDashboard = () => {
         </section>
         <section ref={redemptionRef} className="section">
           <Redemption />
+        </section>
+        <section ref={giftreportref} className="section">
+          <GiftReport />
         </section>
         <section ref={reportRef} className="section">
           <Report />
