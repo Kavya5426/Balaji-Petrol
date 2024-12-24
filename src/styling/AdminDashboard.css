@@ -186,6 +186,7 @@
 
   .dashboard.open {
     transform: translateX(0);
+    width:50%;
   }
 
   .content {
@@ -217,12 +218,18 @@
   .dashboard {
     width: 100%;
     height: auto;
-    position: static;
+  }
+  .dashboard.open {
+    transform: translateX(0);
+    width:50%;
   }
 
   .dashboard-item {
     font-size: 12px;
     padding: 10px 5px;
+  }
+  .section{
+    width:100%;
   }
 
   .section h1 {
