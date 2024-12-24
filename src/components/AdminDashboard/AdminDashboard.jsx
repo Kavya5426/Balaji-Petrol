@@ -1,10 +1,11 @@
-import React, { useRef } from "react";
+import React, { useRef,useState } from "react";
 import "../../styling/AdminDashboard.css";
 import GiftInventory from "../ManagerDashboard/GiftInventory";
 import DataAnalytics from "./DataAnalytics";
 import AdminReport from "./AdminReport";
 
 const AdminDashboard = () => {
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
   // Refs to scroll to sections
   const mainPageRef = useRef(null);
   const dataAnalyticsRef = useRef(null);
@@ -13,18 +14,14 @@ const AdminDashboard = () => {
 
   const scrollToSection = (ref) => {
     ref.current.scrollIntoView({ behavior: "smooth" });
+    if (window.innerWidth <= 768) setSidebarOpen(false);
   };
 
   return (
     <div className="dashboard-container">
       {/* Sidebar */}
-      <div className="dashboard">
+      <div className={`dashboard ${isSidebarOpen ? "open" : ""}`}>
         <h2 className="dashboard-title">Dashboard</h2>
-        <div
-        className="dashboard-arrow" onClick={() => scrollToSection(mainPageRef)}
-      >
-        &#8592; {/* Unicode for a left arrow */}
-      </div>
         <div className="dashboard-item" onClick={() => scrollToSection(giftInventoryRef)}>
           Gift Inventory
         </div>
@@ -34,7 +31,16 @@ const AdminDashboard = () => {
         <div className="dashboard-item" onClick={() => scrollToSection(adminreportRef)}>
           Report
         </div>
+        <div><button
+        className="dashboard-pointer" onClick={() => scrollToSection(mainPageRef)}
+      >&larr;</button></div>
       </div>
+      {/* Sidebar Toggle Button */}
+      <button
+        className="dashboard-arrow" onClick={() => setSidebarOpen(!isSidebarOpen)}
+      >
+        &#9776; {/* Hamburger Icon */}
+      </button>
 
       {/* Main Content */}
       <div className="content">

@@ -1,144 +1,239 @@
 /* Admin Dashboard Styling */
 .dashboard-container {
-    display: flex;
-    flex-direction: column; /* Stack header and cards */
-    width:100vw; /* Right 85% of the screen */
-    margin-left: 5%; /* Leave space for the left dashboard */
-    padding: 10px;
-    box-sizing: border-box;
-    height: 100vh;
-    overflow: hidden;
+  display: flex;
+  flex-wrap: wrap; /* Adjust layout for smaller screens */
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Sidebar */
+.dashboard {
+  width: 20%;
+  background-color: #025ead;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  position: fixed;
+  height: 100%;
+  overflow-y: auto;
+  scrollbar-width: none; /* Hide scrollbar */
+  z-index: 1000; /* Ensure sidebar stays above content */
+}
+
+.dashboard::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in WebKit browsers */
+}
+
+.dashboard-title {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 2px solid #555;
+  padding-bottom: 10px;
+  width: 90%;
+}
+
+.dashboard-item {
+  width: 80%;
+  padding: 10px;
+  background-color: #fb9f00;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.dashboard-item:hover {
+  background-color: #e67e00;
+}
+
+.dashboard-item:active {
+  transform: scale(1.05);
+}
+
+/* Main Content */
+.content {
+  margin-left: 20%; /* Offset to avoid overlapping with sidebar */
+  padding: 10px;
+  box-sizing: border-box;
+  width: 80%;
+  height: 100vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+/* Sections */
+.section {
+  height: 100vh; /* Adjust height for content instead of full viewport */
+  padding: 20px;
+  background-color: #dbebfb;
+  border-bottom: 1px solid #ddd;
+}
+
+.main-section {
+  background-color: #eaf3fc;
+}
+
+.section h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.dashboard-arrow {
+  position: fixed;
+  top: 5px;
+  left: 10px;
+  font-size: 34px;
+  color: #fb9f00;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 1000;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.dashboard-arrow:hover {
+  transform: scale(1.1);
+}
+
+.dashboard-pointer {
+  position: relative;
+  font-size: 34px;
+  color: #fb9f00;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.2s;
+  background: none;
+  border:none;
+}
+
+/* Table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem; /* Adjust for smaller screens */
+}
+
+.table th, .table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.table th {
+  background-color: #f2f2f2;
+}
+
+/* Chart Container */
+.chart-container {
+  width: 100%;
+  height: 400px;
+  background-color: #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
+/* Media Queries */
+
+/* Tablet View */
+@media (max-width: 1024px) {
+  .dashboard {
+    width: 25%; /* Expand for better visibility */
   }
 
-  .dashboard {
-    width: 20%;
-    background-color: #025ead;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 0;
-    top:0;
-    left:0;
-    position: fixed;
-    height: 100%;
-    overflow-y: scroll;
-    scrollbar-width: none;
-  }
-  
-  .dashboard::-webkit-scrollbar {
-    display: none; /* Hide scrollbar in WebKit browsers */
-  }
-  
-  .dashboard-title {
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: center;
-    text-transform: uppercase; /* Optional: Makes text uppercase */
-    border-bottom: 2px solid #555; /* Optional: Adds a separator */
-    padding-bottom: 10px;
-    width: 90%; /* Matches the width of the dashboard items */
-  }
-  
-  .dashboard-item {
-    width: 70%;
-    padding: 15px 10px;
-    background-color: #fb9f00;
-    color: white;
-    text-align: center;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 5px;
-    margin: 10px 0;
-    cursor: pointer;
-    transition: transform 0.3s, background-color 0.3s;
-  }
-  
-  .dashboard-item:hover {
-    background-color: #e67e00;
-  }
-  
-  .dashboard-item:active {
-    transform: scale(1.05);
-  }
-  
   .content {
-    margin-left:0; /* Offset to avoid overlapping with the fixed sidebar */
-    padding: 5px;
-    overflow-y: auto;
-    box-sizing: border-box;
-    width: 85%;
-    width:100vw;
-    scroll-behavior: smooth;
-    height: 100vh;
-    overflow:hidden;
+    margin-left: 25%;
+    width: 75%;
   }
-  
-  /* Sections */
-  .section {
-    height: 100vh; /* Each section covers the full viewport height */
-    padding: 20px;
-    background-color: #dbebfb;
-    border-bottom: 1px solid #ddd;
-    margin-left: 20%;
-    margin-right: 0px;
-  }
-  
-  .main-section {
-    background-color: #eaf3fc; /* Different background for the main page */
-  }
-  
+
   .section h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+    font-size: 1.8rem;
   }
-  
-  .section p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-  }
-  
-  .dashboard-arrow {
-    position: fixed;
-    top: 5px;
-    left: 10px;
-    font-size: 34px;
-    color: #fb9f00;
-    font-weight: 700;
-    cursor: pointer;
-    border:#fb9f00;
-    z-index: 1000; /* Ensures it stays on top */
-    transition: background-color 0.3s, transform 0.2s;
-  }
-  
-  .dashboard-arrow:hover {
-    transform: scale(1.1);
-  }
-  
-  
-  .table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
+
   .table th, .table td {
-    border: 1px solid #ddd;
-    padding: 8px;
+    font-size: 0.85rem; /* Slightly smaller font */
   }
-  
-  .table th {
-    background-color: #f2f2f2;
+
+  .dashboard-item {
+    font-size: 14px;
   }
-  
-  /* Chart Container */
-  .chart-container {
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .dashboard {
+    position: fixed;
+    width: 70%;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .dashboard.open {
+    transform: translateX(0);
+  }
+
+  .content {
+    margin-left: 0; /* No offset for hidden sidebar */
     width: 100%;
-    height: 400px;
-    background-color: #eaeaea;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 8px;
+    padding: 10px;
   }
-  
+
+  .dashboard-item {
+    width: 90%;
+    font-size: 14px;
+  }
+
+  .section h1 {
+    font-size: 1.5rem;
+  }
+
+  .section p {
+    font-size: 1rem;
+  }
+
+  .chart-container {
+    height: 300px;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .dashboard {
+    width: 100%;
+    height: auto;
+    position: static;
+  }
+
+  .dashboard-item {
+    font-size: 12px;
+    padding: 10px 5px;
+  }
+
+  .section h1 {
+    font-size: 1.2rem;
+  }
+
+  .section p {
+    font-size: 0.9rem;
+  }
+
+  .chart-container {
+    height: 250px;
+  }
+}
