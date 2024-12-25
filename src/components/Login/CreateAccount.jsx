@@ -1,6 +1,7 @@
 // src/components/CreateAccount.jsx
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../../styling/CreateAccount.css';
 
 const CreateAccount = () => {
   const [accountDetails, setAccountDetails] = useState({ username: '', password: '', role: '' });
