@@ -28,7 +28,6 @@ body {
   display: flex;
   flex-direction: column; /* Stack header and cards */
   width:100vw; /* Right 85% of the screen */
-  margin-left: 5%; /* Leave space for the left dashboard */
   padding: 10px;
   box-sizing: border-box;
   height: 100vh;
