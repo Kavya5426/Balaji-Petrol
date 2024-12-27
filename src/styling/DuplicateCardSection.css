@@ -1,5 +1,11 @@
+
+.h2{
+  margin-bottom: 20px;
+
+}
 .duplicate-card-section {
   padding: 20px;
+  width:max-content;
   background: #f9f9f9;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -8,7 +14,9 @@
 .fetch-details-form,
 .block-card-form,
 .generate-card-form {
+  margin-top: 20px;
   margin-bottom: 20px;
+  width:70vw;
 }
 
 .fetch-details-form input,
@@ -38,13 +46,13 @@ button:hover {
 
 .form-popup {
   position: fixed;
-  top: 50%;
-  left: 50%;
+  top: 45%;
+  left: 74%;
   transform: translate(-50%, -50%);
   background-color: white;
-  padding: 20px;
+  padding: 25px;
   border: 1px solid #ccc;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 8px rgba(243, 90, 13, 0.2);
   z-index: 1000;
 }
 
