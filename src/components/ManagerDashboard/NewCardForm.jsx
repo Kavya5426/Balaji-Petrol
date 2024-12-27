@@ -38,7 +38,7 @@ const NewCardForm = () => {
 
   return (
     <div className="new-card-form">
-      <h2>New Card Entry</h2>
+      <h2 className="h2">New Card Entry</h2>
 
       {/* Customer Entry Form */}
       {!otpFormVisible && !previewVisible && (
