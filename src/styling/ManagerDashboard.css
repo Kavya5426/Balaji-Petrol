@@ -27,7 +27,7 @@ body {
 .dashboard-container {
   display: flex;
   flex-direction: column; /* Stack header and cards */
-  width:100vw; /* Right 85% of the screen */
+  width:100vw; /* Right 85% of the screen */ /* Leave space for the left dashboard */
   padding: 10px;
   box-sizing: border-box;
   height: 100vh;
@@ -146,17 +146,17 @@ body {
 
 .cards-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid layout */
-  gap: 25px; /* Space between cards */
-  flex-grow: 1; /* Allow the container to grow and fill remaining space */
+  grid-template-columns: repeat(auto-fit, minmax(2.5rem ,2fr)); 
+  gap: 20px; /* Space between cards */
   align-content: start; /* Align items at the top */
+  padding: 10px; /* Add padding for smaller devices */
+  box-sizing: border-box; /* Include padding in the width/height calculation */
 }
 
 /* Card Styling */
 .card1 {
   display: flex;
-  flex-direction: column; /* Stack text inside the card */
-  justify-content: space-between; /* Space out text vertically */
+  flex-direction: column;
   align-items: flex-start; /* Align text to the left */
   padding: 20px;
   background: #ffffff;
@@ -164,7 +164,8 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border: 2px solid transparent;
   transition: transform 0.2s, box-shadow 0.3s, border-color 0.3s;
-  min-height: 150px; /* Ensure consistent height */
+  -height: rem; 
+  width:8.8rem;
 }
 
 .card1 h3 {
@@ -201,6 +202,7 @@ body {
 
   .cards-container {
     gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust column width for smaller devices */
   }
 
   .card1 {
@@ -216,6 +218,27 @@ body {
     font-size: 0.9rem;
   }
 }
+
+@media (max-width: 480px) {
+  .cards-container {
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Smaller column size for very small devices */
+  }
+
+  .card1 {
+    padding: 10px;
+    min-height: 100px;
+  }
+
+  .card1 h3 {
+    font-size: 1rem;
+  }
+
+  .card1 p {
+    font-size: 0.8rem;
+  }
+}
+
 
 .dashboard-arrow {
   position: fixed;
