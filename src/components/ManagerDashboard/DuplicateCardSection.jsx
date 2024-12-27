@@ -191,7 +191,9 @@ const DuplicateCardSection = () => {
     setCustomerDetails({
       name: "John Doe",
       customerId: "12345",
-      cardNumber: "987654321",
+      cardNumber: "CARD-543126",
+      phoneNumber:"1234567890"
+
     });
   };
 
@@ -220,11 +222,11 @@ const DuplicateCardSection = () => {
 
   return (
     <div className="duplicate-card-section">
-      <h2>Duplicate Card</h2>
+      <h2 className="h2">Duplicate Card</h2>
       {/* Fetch Customer Details */}
       <form className="fetch-details-form" onSubmit={handleFetchDetails}>
-        <label>Enter Contact Number:</label>
-        <input type="text" placeholder="Enter phone number" required />
+        <label>Contact Number/Card Number:</label>
+        <input type="text" placeholder="Enter phone number/Card Number" required />
         <button type="submit">Fetch Details</button>
       </form>
 
@@ -293,7 +295,7 @@ const DuplicateCardSection = () => {
                 onChange={handleInputChange}
               />
             </label>
-            <button type="submit">Submit</button>
+            <button type="submit" >Submit</button>
             <button type="button" onClick={() => setIsFormVisible(false)}>
               Cancel
             </button>
