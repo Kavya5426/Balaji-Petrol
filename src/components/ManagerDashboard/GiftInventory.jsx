@@ -14,6 +14,8 @@ const GiftInventory = () => {
   const togglePopup = (type) => setShowPopup(type);
 
   return (
+    
+    
     <div className="gift-inventory">
       {/* Rectangle with Scrollable Table */}
       <div className="inventory-table-wrapper">
@@ -45,9 +47,6 @@ const GiftInventory = () => {
         <div className="card" onClick={() => togglePopup("giftStock")}>
           Gift-stock
         </div>
-        <div className="card" onClick={() => togglePopup("redeemableGifts")}>
-          Redeemable Gifts
-        </div>
         <div className="card" onClick={() => togglePopup("redeemedGifts")}>
           Redeemed Gifts
         </div>
@@ -60,6 +59,8 @@ const GiftInventory = () => {
           <form>
             <label>Item Name:</label>
             <input type="text" placeholder="Enter item name" />
+            <label>Points Needed:</label>
+            <input type="number" placeholder="Enter Minimum Points Required" />
             <label>Number of Items:</label>
             <input type="number" placeholder="Enter number of items" />
             <label>Date of Arrival:</label>
@@ -82,24 +83,6 @@ const GiftInventory = () => {
             </thead>
             <tbody>
               {/* Populate with calculated stock */}
-            </tbody>
-          </table>
-          <button onClick={() => togglePopup(null)}>Close</button>
-        </div>
-      )}
-      {showPopup === "redeemableGifts" && (
-        <div className="popup">
-          <h3>Redeemable Gifts</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>Item</th>
-                <th>No. of Items</th>
-                <th>Points</th>
-              </tr>
-            </thead>
-            <tbody>
-              {/* Populate with redeemable data */}
             </tbody>
           </table>
           <button onClick={() => togglePopup(null)}>Close</button>
