@@ -1,4 +1,6 @@
 .gift-inventory {
+  position:relative;
+  top:60px;
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
@@ -91,4 +93,34 @@
   .popup button:hover {
     background: #005bb5;
   }
+  .table-wrapper {
+    overflow-x: auto;
+    max-width: 100%;
+  }
+  
+  .table-wrapper table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table-wrapper th,
+  .table-wrapper td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .table-wrapper::-webkit-scrollbar {
+    height: 100%;
+  }
+  
+  .table-wrapper::-webkit-scrollbar-thumb {
+    background: #cccccc;
+    border-radius: 4px;
+  }
+  
+  .table-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #aaaaaa;
+  }
+  
   

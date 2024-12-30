@@ -73,6 +73,7 @@ const GiftInventory = () => {
       {showPopup === "giftStock" && (
         <div className="popup">
           <h3>Gift-stock</h3>
+          <div className="table-wrapper">
           <table>
             <thead>
               <tr>
@@ -85,12 +86,14 @@ const GiftInventory = () => {
               {/* Populate with calculated stock */}
             </tbody>
           </table>
+          </div>
           <button onClick={() => togglePopup(null)}>Close</button>
         </div>
       )}
       {showPopup === "redeemedGifts" && (
         <div className="popup">
           <h3>Redeemed Gifts</h3>
+          <div className="table-wrapper">
           <table>
             <thead>
               <tr>
@@ -106,6 +109,7 @@ const GiftInventory = () => {
               {/* Populate with redeemed gift data */}
             </tbody>
           </table>
+          </div>
           <button onClick={() => togglePopup(null)}>Close</button>
         </div>
       )}
