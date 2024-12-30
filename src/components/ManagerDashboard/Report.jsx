@@ -20,7 +20,8 @@ const Report = () => {
     (item) =>
       item.phone.includes(searchTerm) ||
       item.custId.includes(searchTerm) ||
-      item.cardNo.includes(searchTerm)
+      item.cardNo.includes(searchTerm) ||
+      item.name.includes(searchTerm)
   );
 
   // Export as PDF
@@ -109,7 +110,7 @@ const Report = () => {
       <div className="search-bar">
         <input
           type="text"
-          placeholder="Search by Phone, Customer ID, or Card Number"
+          placeholder="Search by Phone, Customer ID,name, or Card Number"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
