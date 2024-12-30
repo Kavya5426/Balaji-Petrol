@@ -24,7 +24,7 @@ const Report = () => {
       <div className="search-bar">
         <input
           type="text"
-          placeholder="Search by Phone, Customer ID, or Card Number"
+          placeholder="Search by Phone, Customer ID, Name,or Card Number"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
