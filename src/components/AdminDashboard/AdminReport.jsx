@@ -14,7 +14,8 @@ const Report = () => {
     (item) =>
       item.phone.includes(searchTerm) ||
       item.custId.includes(searchTerm) ||
-      item.cardNo.includes(searchTerm)
+      item.cardNo.includes(searchTerm) ||
+      item.name.includes(searchTerm)
   );
 
   return (
