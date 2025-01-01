@@ -42,7 +42,8 @@ const EmployeeDashboard = () => {
   const filteredData = giftReportData.filter((report) =>
     report.customerName.toLowerCase().includes(searchTerm.toLowerCase()) ||
     report.customerId.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    report.phoneNumber.includes(searchTerm)
+    report.phoneNumber.includes(searchTerm)||
+    report.redemptionDate.includes(searchTerm)
   );
 
   return (
@@ -52,7 +53,7 @@ const EmployeeDashboard = () => {
       <div className="search-bar">
         <input
           type="text"
-          placeholder="Search by Customer Name, ID, or Phone Number..."
+          placeholder="Search by Customer Name, ID,Date or Phone Number..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
