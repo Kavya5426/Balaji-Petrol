@@ -29,10 +29,9 @@ const EmployeeDashboard = () => {
       {/* Static Left Sidebar */}
       <div className="dashboard">
         <h2 className="dashboard-title">Dashboard</h2>
-        <div
-        className="dashboard-arrow" onClick={() => scrollToSection(mainPageRef)}>
-        &#8592; {/* Unicode for a left arrow */}
-      </div>
+      <div className="dashboard-item" onClick={() => scrollToSection(mainPageRef)}>
+          Home
+        </div>
         <div className="dashboard-item" onClick={() => scrollToSection(newCardRef)}>
           New Card
         </div>

@@ -27,11 +27,10 @@ const ManagerDashboard = () => {
     <div className="dashboard-container">
       {/* Static Left Sidebar */}
       <div className="dashboard">
-        <h2 className="dashboard-title">Dashboard</h2>
-        <div
-        className="dashboard-arrow" onClick={() => scrollToSection(mainPageRef)}>
-        &#8592; {/* Unicode for a left arrow */}
-      </div>
+        <h5 className="dashboard-title">Dashboard</h5>
+        <div className="dashboard-item" onClick={() => scrollToSection(mainPageRef)}>
+          Home
+        </div>
         <div className="dashboard-item" onClick={() => scrollToSection(newCardRef)}>
           New Card
         </div>

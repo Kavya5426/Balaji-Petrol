@@ -22,6 +22,9 @@ const AdminDashboard = () => {
       {/* Sidebar */}
       <div className={`dashboard ${isSidebarOpen ? "open" : ""}`}>
         <h2 className="dashboard-title">Dashboard</h2>
+        <div className="dashboard-item" onClick={() => scrollToSection(mainPageRef)}>
+          Home
+        </div>
         <div className="dashboard-item" onClick={() => scrollToSection(giftInventoryRef)}>
           Gift Inventory
         </div>
@@ -31,9 +34,6 @@ const AdminDashboard = () => {
         <div className="dashboard-item" onClick={() => scrollToSection(adminreportRef)}>
           Report
         </div>
-        <div><button
-        className="dashboard-pointer" onClick={() => scrollToSection(mainPageRef)}
-      >&larr;</button></div>
       </div>
       {/* Sidebar Toggle Button */}
       <button
