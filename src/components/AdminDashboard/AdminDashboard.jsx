@@ -3,10 +3,12 @@ import "../../styling/AdminDashboard.css";
 import GiftInventory from "../ManagerDashboard/GiftInventory";
 import DataAnalytics from "./DataAnalytics";
 import AdminReport from "./AdminReport";
+import { useNavigate } from "react-router-dom";
 
 const AdminDashboard = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
   // Refs to scroll to sections
+  const navigate = useNavigate();
   const mainPageRef = useRef(null);
   const dataAnalyticsRef = useRef(null);
   const giftInventoryRef = useRef(null);
@@ -16,7 +18,9 @@ const AdminDashboard = () => {
     ref.current.scrollIntoView({ behavior: "smooth" });
     if (window.innerWidth <= 768) setSidebarOpen(false);
   };
-
+  const handleLogout = () => {
+    navigate("/"); // Redirect to login page on logout
+  };
   return (
     <div className="dashboard-container">
       {/* Sidebar */}
@@ -33,6 +37,9 @@ const AdminDashboard = () => {
         </div>
         <div className="dashboard-item" onClick={() => scrollToSection(adminreportRef)}>
           Report
+        </div>
+        <div className="dashboard-item" onClick={handleLogout}>
+          Logout
         </div>
       </div>
       {/* Sidebar Toggle Button */}

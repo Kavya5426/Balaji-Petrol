@@ -5,10 +5,13 @@ import DuplicateCardSection from "./DuplicateCardSection"; // Import the compone
 import Redemption from "./Redemption";
 import GiftInventory from "./GiftInventory";
 import Report from "./Report";
+import { useNavigate } from "react-router-dom";
+
 
 
 const ManagerDashboard = () => {
   // Create references for scrolling
+  const navigate = useNavigate();
   const mainPageRef = useRef(null);
   const newCardRef = useRef(null);
   const duplicateCardRef = useRef(null);
@@ -21,6 +24,9 @@ const ManagerDashboard = () => {
     if (ref.current) {
       ref.current.scrollIntoView({ behavior: "smooth" });
     }
+  };
+  const handleLogout = () => {
+    navigate("/"); // Redirect to login page on logout
   };
 
   return (
@@ -45,6 +51,9 @@ const ManagerDashboard = () => {
         </div>
         <div className="dashboard-item" onClick={() => scrollToSection(reportRef)}>
           Report
+        </div>
+        <div className="dashboard-item" onClick={handleLogout}>
+          Logout
         </div>
       </div>
 

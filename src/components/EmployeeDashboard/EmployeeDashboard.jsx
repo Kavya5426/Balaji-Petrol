@@ -5,10 +5,12 @@ import DuplicateCardSection from "../ManagerDashboard/DuplicateCardSection"; // 
 import Redemption from "../ManagerDashboard/Redemption";
 import Report from "../ManagerDashboard/Report";
 import GiftReport from "../EmployeeDashboard/GiftReport";
+import { useNavigate } from "react-router-dom";
 
 
 const EmployeeDashboard = () => {
   // Create references for scrolling
+  const navigate = useNavigate();
   const mainPageRef = useRef(null);
   const newCardRef = useRef(null);
   const duplicateCardRef = useRef(null);
@@ -22,6 +24,9 @@ const EmployeeDashboard = () => {
     if (ref.current) {
       ref.current.scrollIntoView({ behavior: "smooth" });
     }
+  };
+  const handleLogout = () => {
+    navigate("/"); // Redirect to login page on logout
   };
 
   return (
@@ -46,6 +51,9 @@ const EmployeeDashboard = () => {
         </div>
         <div className="dashboard-item" onClick={() => scrollToSection(reportRef)}>
           Report
+        </div>
+        <div className="dashboard-item" onClick={handleLogout}>
+          Logout
         </div>
       </div>
 
