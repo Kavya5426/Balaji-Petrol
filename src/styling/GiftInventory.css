@@ -1,10 +1,10 @@
 .gift-inventory {
   position:relative;
   top:60px;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 20px;
-    gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
   }
   
   .inventory-table-wrapper {
@@ -23,7 +23,7 @@
   
   .inventory-table th,
   .inventory-table td {
-    text-align: left;
+    text-align: center;
     padding: 10px;
     border-bottom: 1px solid #ddd;
   }

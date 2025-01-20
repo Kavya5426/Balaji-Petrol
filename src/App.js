@@ -32,7 +32,7 @@ import CreateAccount from './components/Login/CreateAccount';
 import ManagerDashboard from './components/ManagerDashboard/ManagerDashboard';
 import AdminDashboard from './components/AdminDashboard/AdminDashboard';
 import EmployeeDashboard from './components/EmployeeDashboard/EmployeeDashboard';
-
+import './App.css';
 
 const App = () => {
   return (
