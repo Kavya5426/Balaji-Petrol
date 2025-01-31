@@ -8,25 +8,77 @@
     margin: 10px auto;
     padding: 10px;
     font-size: 16px;
+    border-radius: 50px;
   }
   
-  .customer-table,
+  .customer-table {
+    width: 100%;
+    border-collapse:separate;
+    border-spacing: 0 12px;
+    border-radius: 20px;
+  }
+
   .gift-table {
     width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+    border-collapse:separate;
+    border-spacing: 0 12px;
+    border-radius: 20px;
+    
   }
-  
-  .customer-table th,
-  .customer-table td,
-  .gift-table th,
-  .gift-table td {
-    border: 1px solid #ddd;
-    padding: 10px;
+  .customer-table th,.gift-table thead th {
     text-align: center;
-    margin-bottom: 20px;
+    padding: 15px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: #f5f5f5;
+    background: #80a1e2;
+  }
+
+  .customer-table td,.gift-table tbody td {
+    text-align: center;
+    font-size:18px;
+    padding:6.5px;
   }
   
+  .customer-table tbody tr,.gift-table tbody tr {
+    border-radius: 20px;
+    background: #b7d6f3;
+    padding:10px;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+  }
+
+  .customer-table tr:hover,.gift-table tr:hover {
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+    cursor: pointer;
+    border-radius: 50px;
+  }
+
+  .customer-table tr:active,.gift-table tr:active {
+    transform: scale(0.98);
+    box-shadow: 3px 6px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .customer-table th:first-child,.gift-table th:first-child {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  
+  .customer-table th:last-child,.gift-table th:last-child {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  
+  .customer-table tbody tr :first-child,.gift-table tbody tr :first-child {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  
+  .customer-table tbody tr :last-child,.gift-table tbody tr :last-child {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
   .popup {
     position: fixed;
     top: 20%;

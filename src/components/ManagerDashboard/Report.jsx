@@ -134,7 +134,7 @@ const Report = () => {
       </div>
 
       {/* Scrollable Table */}
-      <div className="table-wrapper">
+      
         <table className="report-table">
           <thead>
             <tr>
@@ -162,7 +162,6 @@ const Report = () => {
           </tbody>
         </table>
       </div>
-    </div>
   );
 };
 

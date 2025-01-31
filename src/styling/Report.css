@@ -17,36 +17,77 @@
     border-radius: 5px;
     font-size: 16px;
   }
-  
+  /*
   .table-wrapper {
     max-height: 500px;
     overflow-y: auto;
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 10px;
-  }
+  }*/
   
   .report-table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse:separate;
+    border-spacing: 0 12px;
+    border-radius: 20px;
   }
-  
-  .report-table th,
+
+  .report-table th{
+    text-align: center;
+    padding: 15px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: #f5f5f5;
+    background: #80a1e2;
+  }
+
   .report-table td {
-    text-align: left;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
+    text-align: center;
+    font-size:18px;
+    padding:15px;
   }
   
-  .report-table th {
-    background-color: #f7f7f7;
-    font-weight: bold;
+  .report-table tbody tr {
+    border-radius: 20px;
+    background: #b7d6f3;
+    padding:10px;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
   }
-  
+
   .report-table tr:hover {
-    background-color: #f1f1f1;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+    cursor: pointer;
+    border-radius: 50px;
+  }
+
+  .report-table tr:active {
+    transform: scale(0.98);
+    box-shadow: 3px 6px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .report-table th:first-child {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
   }
   
+  .report-table th:last-child {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  
+  .report-table tbody tr :first-child {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  
+  .report-table tbody tr :last-child {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
   /* Hide scrollbar */
   .table-wrapper::-webkit-scrollbar {
     display: none;
