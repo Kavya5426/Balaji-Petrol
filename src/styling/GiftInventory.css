@@ -18,14 +18,64 @@
   
   .inventory-table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse:separate;
+    border-spacing: 0 12px;
+    border-radius: 20px;
+    
+  }
+  .inventory-table thead th {
+    text-align: center;
+    padding: 15px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: #f5f5f5;
+    background: #80a1e2;
+  }
+
+  .inventory-table tbody td {
+    text-align: center;
+    font-size:18px;
+    padding:13px;
   }
   
-  .inventory-table th,
-  .inventory-table td {
-    text-align: center;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
+  .inventory-table tbody tr {
+    border-radius: 20px;
+    background: #b7d6f3;
+    padding:10px;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+  }
+
+  .inventory-table tr:hover {
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+    cursor: pointer;
+    border-radius: 50px;
+  }
+
+  .inventory-table tr:active {
+    transform: scale(0.98);
+    box-shadow: 3px 6px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .inventory-table th:first-child {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  
+  .inventory-table th:last-child {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  
+  .inventory-table tbody tr :first-child {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  
+  .inventory-table tbody tr :last-child {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
   }
   
   .cards-wrapper {
@@ -59,8 +109,8 @@
     border-radius: 10px;
     padding: 20px;
     z-index: 1000;
-    width: 50%;
-    max-width: 600px;
+    width: 55%;
+    max-width: 800px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   }
   

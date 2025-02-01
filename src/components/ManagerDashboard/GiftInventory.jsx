@@ -97,12 +97,14 @@ const GiftInventory = () => {
           <table>
             <thead>
               <tr>
+              <th>Customer Name</th>
+                <th>Customer ID</th>
+                <th>Phone Number</th>
                 <th>Item Name</th>
-                <th>Card Number</th>
-                <th>Customer Name</th>
-                <th>Date</th>
-                <th>No. of Items</th>
-                <th>Points Deducted</th>
+                <th>No. of Items Redeemed</th>
+                <th>Points Consumed</th>
+                <th>Date of Redemption</th>
+                <th>No. of Items Remaining</th>
               </tr>
             </thead>
             <tbody>
