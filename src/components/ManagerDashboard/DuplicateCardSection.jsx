@@ -223,14 +223,14 @@ const DuplicateCardSection = () => {
   return (
     <div className="duplicate-card-section">
       <h2 className="h2">Duplicate Card</h2>
-      {/* Fetch Customer Details */}
+      
       <form className="fetch-details-form" onSubmit={handleFetchDetails}>
         <label>Contact Number/Card Number:</label>
         <input type="text" placeholder="Enter phone number/Card Number" required />
         <button type="submit">Fetch Details</button>
       </form>
 
-      {/* Display Customer Details */}
+      
       {customerDetails && (
         <div className="customer-details">
           <h3>Customer Details:</h3>
@@ -238,7 +238,7 @@ const DuplicateCardSection = () => {
           <p>Customer ID: {customerDetails.customerId}</p>
           <p>Card Number: {customerDetails.cardNumber || "No active card"}</p>
 
-          {/* Block Card Button */}
+        
           <form className="block-card-form" onSubmit={handleBlockCard}>
             <label>Enter Card Number to Block:</label>
             <input
@@ -251,7 +251,7 @@ const DuplicateCardSection = () => {
             <button type="submit">Block Card</button>
           </form>
 
-          {/* Generate Duplicate Card Button */}
+          
           <form className="generate-card-form" onSubmit={handleGenerateNewCard}>
             <label>Generate New Card:</label>
             {newCardNumber && <p>New Card Number: {newCardNumber}</p>}
@@ -260,10 +260,10 @@ const DuplicateCardSection = () => {
         </div>
       )}
 
-      {/* Generate Bill Button */}
       
-      <button onClick={() => setIsFormVisible(true)}>Generate Bill</button>
-      {/* Pop-up Form */}
+      {/*
+      <button onClick={() => setIsFormVisible(true)}>Generate Bill</button> */}
+      
       {isFormVisible && (
         <div className="form-popup">
           <form className="bill-form" onSubmit={handleFormSubmit}>

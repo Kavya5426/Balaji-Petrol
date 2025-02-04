@@ -14,7 +14,7 @@ const RedemptionSection = () => {
   const [showGiftEligibilityPopup, setShowGiftEligibilityPopup] = useState(false);
   const [showOtpPopup, setShowOtpPopup] = useState(false);
   const [otp, setOtp] = useState("");
-  const [pointsToAdd, setPointsToAdd] = useState(0); // State to track input points
+  const [pointsToAdd, setPointsToAdd] = useState(0); 
   const [isBillFormVisible, setIsBillFormVisible] = useState(false);
   const [isBillVisible, setIsBillVisible] = useState(false);
 
@@ -91,6 +91,9 @@ const RedemptionSection = () => {
   // Handle Bill Form Submission
   const handleBillFormSubmit = (e) => {
     e.preventDefault();
+    const openingPoints = formData.openingPoints || 0;
+  const additionalPoints = formData.additionalPoints || 0;
+  const deductionPoints = formData.deductionPoints || 0;
     const totalPoints =
       formData.openingPoints +
       formData.additionalPoints -
@@ -262,14 +265,71 @@ const RedemptionSection = () => {
         onChange={handleSearch}
         className="search-bar"
       />
-      <button
-      type="button"
-      onClick={() => setIsBillFormVisible(true)}
-      style={{ marginTop: "10px" }}
-    >
-      Generate Bill
-    </button>
+      
 
+    <button onClick={() => setIsBillFormVisible(true)} style={{ marginTop: "10px" }}>Generate Bill</button> 
+      
+    {isBillFormVisible && (
+        <div className="form-popup">
+          <form onSubmit={handleBillFormSubmit}>
+            <h3>Enter Bill Details</h3>
+            <label>
+              Opening Points:
+              <input
+                type="number"
+                name="openingPoints"
+                value={formData.openingPoints}
+                onChange={handleBillInputChange}
+              />
+            </label>
+            <label>
+              Deduction Points:
+              <input
+                type="number"
+                name="deductionPoints"
+                value={formData.deductionPoints}
+                onChange={handleBillInputChange}
+              />
+            </label>
+            <label>
+              Additional Points:
+              <input
+                type="number"
+                name="additionalPoints"
+                value={formData.additionalPoints}
+                onChange={handleBillInputChange}
+              />
+            </label>
+            <button type="submit">Submit</button>
+            <button type="button" onClick={() => setIsBillFormVisible(false)}>
+              Close
+            </button>
+          </form>
+        </div>
+      )}
+
+    
+      {isBillVisible && (
+  <div className="form-popup">
+    <div id="bill-content" className="bill">
+      <h3>Loyalty Scheme</h3>
+      <h4>BALAJI HIGHWAY PETROLEUM</h4>
+      <p>Phone: 7224554934</p>
+      <hr />
+      <p>Date: {new Date().toLocaleDateString()}</p>
+      <p>Opening Points: {formData.openingPoints}</p>
+      <p>Deduction Points: {formData.deductionPoints}</p>
+      <p>Additional Points: {formData.additionalPoints}</p>
+      <p>Total Points: {formData.totalPoints}</p>
+      <hr />
+      <p>Redeemable Points: {formData.redeemablePoints}</p>
+      <hr />
+    </div>
+    <button onClick={printBill}>Print</button>
+    <button onClick={downloadBill}>Download</button>
+    <button onClick={() => setIsBillVisible(false)}>Close</button>
+  </div>
+)}       
       
 
       {/* Customer Table */}
@@ -307,7 +367,7 @@ const RedemptionSection = () => {
       {/* Add Points Popup */}
       {showAddPointsPopup && (
         <div className="popup">
-          <h3>Add Points</h3>
+          <h2>Add Points</h2>
           <p>
             Customer: {selectedCustomer.name} ({selectedCustomer.card})
           </p>
@@ -316,9 +376,9 @@ const RedemptionSection = () => {
             type="number"
             placeholder="Enter points to add"
             value={pointsToAdd}
-            onChange={(e) => setPointsToAdd(parseInt(e.target.value) || 0)} // Update input state
+            onChange={(e) => setPointsToAdd(parseInt(e.target.value) || 0)} 
           />
-          <button onClick={updatePoints}>Submit</button> {/* Submit button */}
+          <button onClick={updatePoints}>Submit</button> 
           <button onClick={closePopups}>Close</button>
         </div>
       )}
@@ -326,7 +386,7 @@ const RedemptionSection = () => {
       {/* Gift Eligibility Popup */}
       {showGiftEligibilityPopup && (
         <div className="popup">
-          <h3>Gift Eligibility</h3>
+          <h2>Gift Eligibility</h2>
           <p>
             Customer: {selectedCustomer.name} ({selectedCustomer.points} points)
           </p>

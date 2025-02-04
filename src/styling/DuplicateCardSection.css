@@ -1,13 +1,18 @@
 
 .h2{
   margin-bottom: 20px;
+  text-align: center;
 
 }
 .duplicate-card-section {
+  margin-left:27%;
+  margin-top:20px;
+  margin-bottom: 40px;
   padding: 20px;
+  background-color:whitesmoke;
+  border-radius: 10px;
+  align-self: center;
   width:max-content;
-  background: #f9f9f9;
-  border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 

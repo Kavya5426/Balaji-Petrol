@@ -74,7 +74,7 @@ const GiftInventory = () => {
         <div className="popup">
           <h3>Gift-stock</h3>
           <div className="table-wrapper">
-          <table>
+          <table className="inventory-table" >
             <thead>
               <tr>
                 <th>Item Name</th>
@@ -83,7 +83,7 @@ const GiftInventory = () => {
               </tr>
             </thead>
             <tbody>
-              {/* Populate with calculated stock */}
+            
             </tbody>
           </table>
           </div>
@@ -94,7 +94,7 @@ const GiftInventory = () => {
         <div className="popup">
           <h3>Redeemed Gifts</h3>
           <div className="table-wrapper">
-          <table>
+          <table className="inventory-table">
             <thead>
               <tr>
               <th>Customer Name</th>
@@ -108,7 +108,8 @@ const GiftInventory = () => {
               </tr>
             </thead>
             <tbody>
-              {/* Populate with redeemed gift data */}
+            
+              
             </tbody>
           </table>
           </div>

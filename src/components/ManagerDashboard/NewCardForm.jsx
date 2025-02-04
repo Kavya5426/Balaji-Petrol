@@ -43,7 +43,6 @@ const NewCardForm = () => {
     }
   };
 
-  // Handle Input Changes for Bill Form
   const handleBillInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -88,22 +87,22 @@ const NewCardForm = () => {
             .bill {
               width: 100%;
               max-width: 250px;
-              margin: 0 auto; /* Center the bill on the page */
+              margin: 0 auto;
               padding: 20px;
               border: 1px solid #ccc;
               background-color: #f8f9fa;
             }
             h3, h4 {
-              text-align: center; /* Center-align headings */
+              text-align: center; 
               margin: 0 0 10px;
             }
             p {
               margin: 10px 0;
-              display: flex; /* Use flexbox for alignment */
-              justify-content: space-between; /* Space between label and value */
+              display: flex; 
+              justify-content: space-between; 
             }
             .centered {
-              text-align: center; /* Center-align phone and date */
+              text-align: center; 
               margin: 10px 0;
             }
             hr {
@@ -246,12 +245,13 @@ const NewCardForm = () => {
     window.addEventListener("beforeunload", handleWindowChange);
     return () => window.removeEventListener("beforeunload", handleWindowChange);
   }, []);
+  
 
   return (
     <div className="new-card-form">
       <h2 className="h2">New Card Entry</h2>
 
-      {/* New Card Form */}
+      
       {isFormVisible && (
         <form onSubmit={handleNewCardFormSubmit}>
           <label>
@@ -284,17 +284,10 @@ const NewCardForm = () => {
             <input type="text" value={customerFormData.cardNumber} disabled />
           </label>
           <button type="submit">Submit</button>
-          <button
-            type="button"
-            onClick={() => setIsBillFormVisible(true)}
-            style={{ marginTop: "10px" }}
-          >
-            Generate Bill
-          </button>
         </form>
       )}
 
-      {/* OTP Form */}
+      
       {otpFormVisible && (
         <div className="otp-popup">
           <h3>Enter OTP</h3>
@@ -309,7 +302,7 @@ const NewCardForm = () => {
         </div>
       )}
 
-      {/* Bill Form */}
+
       {isBillFormVisible && (
         <div className="form-popup">
           <form onSubmit={handleBillFormSubmit}>
@@ -349,7 +342,7 @@ const NewCardForm = () => {
         </div>
       )}
 
-      {/* Display Bill */}
+    
       {isBillVisible && (
   <div className="form-popup">
     <div id="bill-content" className="bill">
@@ -370,7 +363,7 @@ const NewCardForm = () => {
     <button onClick={downloadBill}>Download</button>
     <button onClick={() => setIsBillVisible(false)}>Close</button>
   </div>
-)}
+)} 
 
     </div>
   );

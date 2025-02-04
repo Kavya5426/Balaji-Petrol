@@ -111,6 +111,7 @@
     z-index: 1000;
     width: 55%;
     max-width: 800px;
+    align-items: center;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   }
   
@@ -120,14 +121,9 @@
   
   .popup table {
     width: 100%;
-    border-collapse: collapse;
-  }
-  
-  .popup th,
-  .popup td {
-    text-align: left;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
+    border-collapse:separate;
+    border-spacing: 0 12px;
+    border-radius: 20px;
   }
   
   .popup button {
