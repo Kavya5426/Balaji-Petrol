@@ -7,8 +7,15 @@ import GiftInventory from "./GiftInventory";
 import Report from "./Report";
 import { useNavigate } from "react-router-dom";
 
-const ManagerDashboard = () => {
-  // Create references for scrolling
+const Navbar = () => {
+  return (
+    <nav className="navbar">
+      <h1>Manager Dashboard</h1>
+    </nav>
+  );
+}; 
+
+const ManagerDashboard = ({ user, onLogout }) => {
   const navigate = useNavigate();
   const mainPageRef = useRef(null);
   const newCardRef = useRef(null);
@@ -17,7 +24,7 @@ const ManagerDashboard = () => {
   const giftInventoryRef = useRef(null);
   const reportRef = useRef(null);
 
-  // Function to scroll to the specific section
+  
   const scrollToSection = (ref) => {
     if (ref.current) {
       ref.current.scrollIntoView({ behavior: "smooth" });
@@ -29,7 +36,8 @@ const ManagerDashboard = () => {
 
   return (
     <div className="dashboard-container">
-      {/* Static Left Sidebar */}
+      <Navbar/>
+      
       <div className="dashboard">
         <h2 className="dashboard-logo">
           <svg

@@ -8,7 +8,54 @@ body {
   overflow:hidden;
 }
 
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 45px;
+  background-color: #025ead;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  z-index: 1000;
+}
 
+/* Profile Icon */
+.profile-icon {
+  cursor: pointer;
+}
+
+/* Profile Modal */
+.profile-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  z-index: 2000;
+}
+
+.profile-content {
+  text-align: center;
+}
+
+.close-btn {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
 
 * {
   margin: 0;
@@ -26,14 +73,16 @@ body {
   height: 100%;
 }
 .dashboard-container {
+  top: 50px;
   display: flex;
-  flex-direction: column; /* Stack header and cards */
-  width:100vw; /* Right 85% of the screen / / Leave space for the left dashboard */
+  flex-direction: column;
+  width:100vw; 
   padding: 10px;
   box-sizing: border-box;
   height: 100vh;
   overflow: hidden;
 }
+
 
 /* Static Sidebar */
 .dashboard {
@@ -43,10 +92,10 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 10px 0;
-  top:0;
+  top:50px;
   left:0;
   position: fixed;
-  height: 100%;
+  height: calc(100% - 40px);
   overflow-y: scroll;
   scrollbar-width: none;
 }
@@ -107,14 +156,15 @@ body {
 
 /* Main Content Section */
 .content {
+  top:80px;
   margin-left:20%; /* Offset to avoid overlapping with the fixed sidebar */
-  padding: 5px;
+  padding: 10px;
   overflow-y: auto;
   box-sizing: border-box;
   background-color: #eaf3fc;
   width: 80%;
   scroll-behavior: smooth;
-  height: 100vh;
+  
   overflow-x:hidden;
   overflow-y: hidden;
 }
@@ -130,10 +180,11 @@ body {
 
 /* Sections */
 .section {
+  top: 80px;
   height: 100vh; /* Each section covers the full viewport height */
   background-color: #eaf3fc;
   margin:0px;
-  padding:20px;
+  padding-top:50px;
   width:80vw;
   overflow-y: auto;
   overflow-x: hidden;
@@ -142,19 +193,21 @@ body {
 }
 
 .main-section {
-  height: 100vh; /* Each section covers the full viewport height */
+  top:50px;
   background-color: #eaf3fc;
-  margin:0px;
-  padding:20px;
+  margin-bottom: 40px;
+  padding-top:60px;
   width:80vw;
   overflow-y: auto;
   overflow-x: hidden;
+  height:calc(100vh-50px);
   box-sizing:border-box; /* Different background for the main page */
 }
 
 .section h1 {
   font-size: 2rem;
   margin-bottom: 10px;
+  top:50px;
 }
 
 .section p {
@@ -296,4 +349,64 @@ body {
 
 .dashboard-arrow:hover {
   transform: scale(1.1);
+}
+
+/* Profile Modal */
+.profile-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  z-index: 2000;
+}
+
+/* Profile Content */
+.profile-content {
+  text-align: center;
+}
+
+.profile-pic-container {
+  margin-bottom: 15px;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  border: 2px solid #0073e6;
+}
+
+input {
+  display: block;
+  width: 90%;
+  margin: 10px auto;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.save-btn {
+  background-color: #0073e6;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+
+.close-btn {
+  background-color: #ff4d4d;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
 }

@@ -14,6 +14,15 @@ const AdminDashboard = () => {
   const giftInventoryRef = useRef(null);
   const adminreportRef = useRef(null);
 
+  const Navbar = () => {
+    return (
+      <nav className="navbar">
+        <h1>Manager Dashboard</h1>
+      </nav>
+    );
+  }; 
+  
+
   const scrollToSection = (ref) => {
     ref.current.scrollIntoView({ behavior: "smooth" });
     if (window.innerWidth <= 768) setSidebarOpen(false);
@@ -23,6 +32,7 @@ const AdminDashboard = () => {
   };
   return (
     <div className="dashboard-container">
+      <Navbar />
       {/* Sidebar */}
       <div className={`dashboard ${isSidebarOpen ? "open" : ""}`}>
       <h2 className="dashboard-logo">

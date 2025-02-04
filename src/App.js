@@ -32,6 +32,9 @@ import CreateAccount from './components/Login/CreateAccount';
 import ManagerDashboard from './components/ManagerDashboard/ManagerDashboard';
 import AdminDashboard from './components/AdminDashboard/AdminDashboard';
 import EmployeeDashboard from './components/EmployeeDashboard/EmployeeDashboard';
+import ProfilePage from './components/Login/ProfilePage';
+
+
 import './App.css';
 
 const App = () => {
@@ -43,6 +46,7 @@ const App = () => {
         <Route path="/manager-dashboard" element={<ManagerDashboard />} />
         <Route path="/admin-dashboard" element={<AdminDashboard />} />
         <Route path="/employee-dashboard" element={<EmployeeDashboard />} />
+        <Route path="/profile-page" element={<ProfilePage/>} />
       </Routes>
     </Router>
   );
@@ -50,3 +54,6 @@ const App = () => {
 
 
 export default App;
+
+
+
