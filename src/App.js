@@ -32,7 +32,9 @@ import CreateAccount from './components/Login/CreateAccount';
 import ManagerDashboard from './components/ManagerDashboard/ManagerDashboard';
 import AdminDashboard from './components/AdminDashboard/AdminDashboard';
 import EmployeeDashboard from './components/EmployeeDashboard/EmployeeDashboard';
-import ProfilePage from './components/Login/ProfilePage';
+import UserProfile from "./components/Login/UserProfile";
+// import ProfilePage from './components/Login/ProfilePage';
+// import Navbar from './components/ManagerDashboard/Navbar';
 
 
 import './App.css';
@@ -40,13 +42,16 @@ import './App.css';
 const App = () => {
   return (
     <Router basename="/Balaji-Petrol">
+      {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<LoginForm />} />
         <Route path="/create-account" element={<CreateAccount />} />
         <Route path="/manager-dashboard" element={<ManagerDashboard />} />
         <Route path="/admin-dashboard" element={<AdminDashboard />} />
         <Route path="/employee-dashboard" element={<EmployeeDashboard />} />
-        <Route path="/profile-page" element={<ProfilePage/>} />
+        {/* <Route path="/profile-page" element={<ProfilePage/>} /> */}
+        {/* <Route path="/profile/:userType" element={<ProfilePage />} /> */}
+        <Route path="/profile" element={<UserProfile />} />
       </Routes>
     </Router>
   );
