@@ -17,27 +17,33 @@ const LoginForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+  
     const { username, password, role } = credentials;
-
+  
     // Simulate login verification (Replace with API calls)
-    if (role === 'manager' && username === 'manager' && password === 'password') {
-      navigate('/manager-dashboard');
-    } else if (role === 'admin' && username === 'admin' && password === 'password') {
-      navigate('/admin-dashboard');
-    }else if (role === 'employee' && username === 'employee' && password === 'password') {
-      navigate('/employee-dashboard');
-    } /*else {
-      alert('Invalid Credentials or Role!');
-    }*/
-
+    if ((role === 'manager' && username === 'manager' && password === 'password') ||
+        (role === 'admin' && username === 'admin' && password === 'password') ||
+        (role === 'employee' && username === 'employee' && password === 'password')) {
+        
+        localStorage.setItem("userType", role);  // Store user type in localStorage
+  
+        if (role === 'manager') {
+          navigate('/manager-dashboard');
+        } else if (role === 'admin') {
+          navigate('/admin-dashboard');
+        } else if (role === 'employee') {
+          navigate('/employee-dashboard');
+        }
+        return;
+    }
+  
     // Hardcoded example credentials
     const exampleUsers = [
       { username: 'manager', password: 'manager123', role: 'manager' },
       { username: 'admin', password: 'admin123', role: 'admin' },
       { username: 'employee', password: 'employee123', role: 'employee' },
     ];
-
+  
     // Validate credentials
     const user = exampleUsers.find(
       (user) =>
@@ -45,19 +51,22 @@ const LoginForm = () => {
         user.password === credentials.password &&
         user.role === credentials.role
     );
-
+  
     if (user) {
+      localStorage.setItem("userType", user.role);  // Store user type in localStorage
+  
       if (user.role === 'manager') {
-        navigate('/manager-dashboard'); // Navigate to Manager Dashboard
+        navigate('/manager-dashboard');
       } else if (user.role === 'admin') {
-        navigate('/admin-dashboard'); // Navigate to Admin Dashboard
+        navigate('/admin-dashboard');
       } else if (user.role === 'employee') {
-        navigate('/employee-dashboard'); // Navigate to Employee Dashboard
+        navigate('/employee-dashboard');
       }
     } else {
       alert('Invalid username, password, or role!');
     }
   };
+  
 
 
   return (

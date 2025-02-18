@@ -8,11 +8,50 @@ body {
   overflow:hidden;
 }
 
+.user-profile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.profile-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 100;
+}
+
+.dropdown-menu p,
+.dropdown-menu button {
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.dropdown-menu button {
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 90%;
   height: 45px;
   background-color: #025ead;
   color: white;
@@ -86,6 +125,7 @@ body {
 
 /* Static Sidebar */
 .dashboard {
+  margin-top: 10px;
   width: 20%;
   background-color: #025ead;
   display: flex;
