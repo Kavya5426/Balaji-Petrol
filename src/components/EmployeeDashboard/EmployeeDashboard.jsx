@@ -1,4 +1,5 @@
-import React, { useRef } from "react";
+import React, { useState,useEffect} from "react";
+import { useRef } from 'react';
 import NewCardForm from "../ManagerDashboard/NewCardForm"
 import "../../styling/ManagerDashboard.css";
 import DuplicateCardSection from "../ManagerDashboard/DuplicateCardSection"; // Import the component
@@ -8,12 +9,61 @@ import GiftReport from "../EmployeeDashboard/GiftReport";
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const [userType, setUserType] = useState("");
+  const [isDropdownVisible, setDropdownVisible] = useState(false);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const storedUserType = localStorage.getItem("userType");
+    if (storedUserType) {
+      setUserType(storedUserType);
+    }
+  }, []);
+
+  const capitalizeFirstLetter = (string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  };
+
+  const handleProfileNavigation = () => {
+    navigate("/profile");
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("userType");
+    navigate("/"); // Redirect to login page
+  };
+
   return (
     <nav className="navbar">
-      <h1>Manager Dashboard</h1>
+      <h1>{userType ? `${capitalizeFirstLetter(userType)} Dashboard` : "Dashboard"}</h1>
+
+      {/* User Profile Dropdown */}
+      <div 
+        className="user-profile"
+        onMouseEnter={() => setDropdownVisible(true)}
+        onMouseLeave={() => setDropdownVisible(false)}
+      >
+        <div className="profile-logo" onClick={handleProfileNavigation}>
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+            alt="User Profile"
+          />
+        </div>
+
+        {isDropdownVisible && (
+          <div className="dropdown-menu">
+            {/* <p>User Type: {capitalizeFirstLetter(userType)}</p> */}
+            <p onClick={() => navigate('/profile')} className="user-type">
+  {capitalizeFirstLetter(userType)}
+</p>
+
+            <button onClick={handleLogout}>Logout</button>
+          </div>
+        )}
+      </div>
     </nav>
   );
-}; 
+};
 
 const EmployeeDashboard = () => {
   // Create references for scrolling
