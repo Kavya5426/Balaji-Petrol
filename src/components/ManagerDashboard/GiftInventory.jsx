@@ -56,7 +56,7 @@ const GiftInventory = () => {
       {showPopup === "giftIn" && (
         <div className="popup">
           <h3>Gift-in</h3>
-          <form className="gift-in-form" style={{ width: "400px" }}>
+          <form className="gift-in-form" style={{ width: "400px", background: '#80a1e2'}}>
             <label>Item Name:</label>
             <input type="text" placeholder="Enter item name" />
             <label>Points Needed:</label>
