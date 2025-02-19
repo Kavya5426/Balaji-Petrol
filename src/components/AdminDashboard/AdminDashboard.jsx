@@ -160,11 +160,11 @@ const Navbar = () => {
         </div>
       </div>
       {/* Sidebar Toggle Button */}
-      <button
+      {/* <button
         className="dashboard-arrow" onClick={() => setSidebarOpen(!isSidebarOpen)}
-      >
+      > */}
         &#9776; {/* Hamburger Icon */}
-      </button>
+      {/* </button> */}
 
       {/* Main Content */}
       <div className="content">
