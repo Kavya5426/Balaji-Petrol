@@ -5,15 +5,15 @@
 
 }
 .duplicate-card-section {
-  margin-left:27%;
-  margin-top:20px;
+  margin-left: 27%;
+  margin-top: 80px;
   margin-bottom: 40px;
   padding: 20px;
-  background-color:whitesmoke;
+  background-color: #80a1e2;
   border-radius: 10px;
   align-self: center;
-  width:max-content;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: max-content;
+  box-shadow: 0 10px 1px #005bb5;
 }
 
 .fetch-details-form,

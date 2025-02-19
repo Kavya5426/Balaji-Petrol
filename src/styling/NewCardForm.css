@@ -4,11 +4,11 @@
   }
   .new-card-form {
     margin-left:27%;
-    margin-top:20px;
+    margin-top:70px;
     padding: 20px;
     background-color:whitesmoke;
     border-radius: 10px;
-    width:fit-content;
+    width:400px;
     align-self: center;
   }
 

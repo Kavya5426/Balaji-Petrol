@@ -56,7 +56,7 @@ const GiftInventory = () => {
       {showPopup === "giftIn" && (
         <div className="popup">
           <h3>Gift-in</h3>
-          <form>
+          <form className="gift-in-form" style={{ width: "400px" }}>
             <label>Item Name:</label>
             <input type="text" placeholder="Enter item name" />
             <label>Points Needed:</label>
@@ -74,7 +74,7 @@ const GiftInventory = () => {
         <div className="popup">
           <h3>Gift-stock</h3>
           <div className="table-wrapper">
-          <table className="inventory-table" >
+          <table className="inventory-table" style={{ width: "700px" }}>
             <thead>
               <tr>
                 <th>Item Name</th>
@@ -93,7 +93,7 @@ const GiftInventory = () => {
       {showPopup === "redeemedGifts" && (
         <div className="popup">
           <h3>Redeemed Gifts</h3>
-          <div className="table-wrapper">
+          <div className="table-wrapper" style={{ width: "900px" }}>
           <table className="inventory-table">
             <thead>
               <tr>

@@ -1,34 +1,30 @@
-/* Navbar Styling */
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #f8f9fa;
+    background-color: #002443;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
-  /* Dashboard Title */
   .navbar h1 {
     margin: 0;
-    font-size: 24px;
-    color: #333;
+    font-size: 30px;
+    color: #ffffff;
   }
   
-  /* User Profile Section */
   .user-profile {
     position: relative;
     cursor: pointer;
+    padding: 60px;
   }
   
-  /* Profile Logo */
   .profile-logo img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
   }
-  
-  /* Dropdown Menu */
   .dropdown-menu {
     position: absolute;
     top: 50px;

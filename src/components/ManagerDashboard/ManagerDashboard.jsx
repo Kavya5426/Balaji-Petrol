@@ -194,9 +194,9 @@ Gift Inventory
 </svg>
 Report
         </div>
-        <div className="dashboard-item" onClick={handleLogout}>
+        {/* <div className="dashboard-item" onClick={handleLogout}>
           Logout
-        </div>
+        </div> */}
       </div>
 
       {/* Sections */}
