@@ -83,6 +83,17 @@ const GiftInventory = () => {
               </tr>
             </thead>
             <tbody>
+              <tr>
+              <td>bluetooth</td>
+              <td>12/03/25</td>
+              <td>56</td>
+              </tr>
+              <tr>
+              <td>speaker</td>
+              <td>12/03/25</td>
+              <td>56</td>
+              </tr>
+              
             
             </tbody>
           </table>
@@ -108,6 +119,26 @@ const GiftInventory = () => {
               </tr>
             </thead>
             <tbody>
+              <tr>
+                <td>ram</td>
+                <td>23</td>
+                <td>7205554325</td>
+                <td>bluetooth</td>
+                <td>67</td>
+                <td>300</td>
+                <td>12/03/25</td>
+                <td>54</td>
+              </tr>
+              <tr>
+                <td>ram</td>
+                <td>23</td>
+                <td>7205554325</td>
+                <td>speaker</td>
+                <td>67</td>
+                <td>300</td>
+                <td>12/03/25</td>
+                <td>54</td>
+              </tr>
             
               
             </tbody>
