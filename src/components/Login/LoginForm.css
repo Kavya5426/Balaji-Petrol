@@ -90,3 +90,89 @@ body {
 .login-form button:hover {
   background-color: #0056b3;
 }
+
+/* Forgot Password Button */
+.forgot-password-btn {
+  background: white !important;
+  color: blue !important;
+  border: none !important;
+  font-size: 14px !important;
+  cursor: pointer !important;
+  display: block !important;
+  margin: 4px auto !important;
+  margin-top: 0px !important;
+  text-decoration: underline !important;
+  width: auto !important;
+  padding: 5px !important;
+}
+
+.forgot-password-btn:hover {
+  color: darkblue !important;
+}
+/* Forgot Password Popup */
+.forgot-password-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  width: 350px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  text-align: center;
+  z-index: 1000;
+}
+
+.popup-content h2 {
+  margin-bottom: 15px;
+}
+
+.popup-content label {
+  display: block;
+  margin: 10px 0;
+}
+
+.popup-content input {
+  width: 90%;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.popup-content p {
+  margin: 10px 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.reset-btn {
+  background: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.reset-btn:hover {
+  background: #0056b3;
+}
+
+.close-btn {
+  background: red;
+  color: white;
+  padding: 8px;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.close-btn:hover {
+  background: darkred;
+}
