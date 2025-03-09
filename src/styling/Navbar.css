@@ -27,8 +27,8 @@
   }
   .dropdown-menu {
     position: absolute;
-    top: 50px;
-    right: 0;
+    top: 100px;
+    right: 30px;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 4px;
