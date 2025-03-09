@@ -91,7 +91,7 @@
     z-index: 1000;
   }
 
-  button1 {
+  .button1 {
     position:relative;
 
     padding: 10px 20px;
@@ -106,3 +106,8 @@
     margin-right: 2px;
   }
   
+  @media (max-width: 768px) {
+  .redemption-section {
+    padding: 20px 5px;
+}
+  }
