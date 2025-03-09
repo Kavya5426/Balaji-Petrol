@@ -104,3 +104,8 @@
     scrollbar-width: none; /* Firefox */
   }
   
+  @media (max-width: 768px) {
+    .report-section {
+      padding: 20px 5px;
+  }
+    }

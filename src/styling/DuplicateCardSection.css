@@ -108,3 +108,13 @@ button:hover {
   display: block;
   width: 100%;
 }
+@media (max-width: 768px) {
+  .duplicate-card-section {
+    margin-left: 15%;
+  }
+}
+@media (max-width: 480px) {
+  .duplicate-card-section {
+    margin-left: 7%;
+  }
+}
