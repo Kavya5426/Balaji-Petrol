@@ -20,18 +20,14 @@ const UserProfile = ({ user }) => {
     navigate('/login'); // Redirect to login
   };
 
-
   const [profileData, setProfileData] = useState({
     username: "",
     role: "",
-    firstName: "",
-    lastName: "",
     email: "",
     phone: "",
     city: "",
     state: "",
     country: "",
-    profileImage: "", 
   });
 
   useEffect(() => {
@@ -42,14 +38,11 @@ const UserProfile = ({ user }) => {
       setProfileData({
         username: user.username,
         role: user.role,
-        firstName: user.firstName || "",
-        lastName: user.lastName || "",
         email: user.email || "",
         phone: user.phone || "",
         city: user.city || "",
         state: user.state || "",
         country: user.country || "",
-        profileImage: user.profileImage || "https://via.placeholder.com/100",
       });
     }
   }, [user]);
@@ -58,81 +51,57 @@ const UserProfile = ({ user }) => {
     setProfileData({ ...profileData, [e.target.name]: e.target.value });
   };
 
-  const handleImageChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setProfileData({ ...profileData, profileImage: reader.result });
-      };
-      reader.readAsDataURL(file);
-    }
-  };
-
   const handleSave = () => {
     localStorage.setItem("profileData", JSON.stringify(profileData));
     alert("Profile Updated Successfully!");
   };
 
-
   return (
- <div className="profile-container">
-      <aside className="sidebar">
-        <h2>Profile</h2>
-        <label htmlFor="profileImageInput" className="profile-image-label">
-          <img
-            src={profileData.profileImage}
-            alt="Profile"
-            className="profile-pic"
-          />
-        </label>
-        <input
-          type="file"
-          id="profileImageInput"
-          accept="image/*"
-          onChange={handleImageChange}
-          style={{ display: "none" }}
-        />
-        <h3>{profileData.username}</h3>
-        <p>{profileData.role}</p>
-      </aside>
+    <div className="profile-container">
+      
 
       <main className="profile-main">
         <h2>Account Settings</h2>
         <div className="profile-form">
-          <div className="form-group">
-            <label>First Name</label>
-            <input type="text" name="firstName" value={profileData.firstName} onChange={handleChange} />
-          </div>
-          <div className="form-group">
-            <label>Last Name</label>
-            <input type="text" name="lastName" value={profileData.lastName} onChange={handleChange} />
-          </div>
-          <div className="form-group">
-            <label>Email</label>
-            <input type="email" name="email" value={profileData.email} onChange={handleChange} />
-          </div>
-          <div className="form-group">
-            <label>Phone</label>
-            <input type="text" name="phone" value={profileData.phone} onChange={handleChange} />
-          </div>
-          <div className="form-group">
-            <label>City</label>
-            <input type="text" name="city" value={profileData.city} onChange={handleChange} />
-          </div>
-          <div className="form-group">
-            <label>State</label>
-            <input type="text" name="state" value={profileData.state} onChange={handleChange} />
-          </div>
-          <div className="form-group">
-            <label>Country</label>
-            <input type="text" name="country" value={profileData.country} onChange={handleChange} />
-          </div>
-          <button className="update-btn" onClick={handleSave}>Update</button>
-        </div>
+    <div className="form-group">
+      <label>Username</label>
+      <input type="text" name="username" value={profileData.username} onChange={handleChange} />
+    </div>
+    <div className="form-group">
+      <label>Role</label>
+      <input type="text" name="role" value={profileData.role} onChange={handleChange} />
+    </div>
+    <div className="form-group">
+      <label>Email</label>
+      <input type="email" name="email" value={profileData.email} onChange={handleChange} />
+    </div>
+    <div className="form-group">
+      <label>Phone</label>
+      <input type="text" name="phone" value={profileData.phone} onChange={handleChange} />
+    </div>
+    <div className="form-group">
+      <label>City</label>
+      <input type="text" name="city" value={profileData.city} onChange={handleChange} />
+    </div>
+    <div className="form-group">
+      <label>State</label>
+      <input type="text" name="state" value={profileData.state} onChange={handleChange} />
+    </div>
+    <div className="form-group">
+      <label>Country</label>
+      <input type="text" name="country" value={profileData.country} onChange={handleChange} />
+    </div>
+    <div className="form-group">
+      <label>Address</label>
+      <input type="text" name="address" value={profileData.address} onChange={handleChange} />
+    </div>
+  </div>
+  <div className="form-actions">
+    <button className="update-btn" onClick={handleSave}>Update</button>
+  </div>
+
       </main>
     </div>
-
   );
 };
 

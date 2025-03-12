@@ -110,6 +110,19 @@ body {
   color: darkblue !important;
 }
 /* Forgot Password Popup */
+/* Overlay for Blur Effect */
+.forgot-password-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Semi-transparent black */
+  backdrop-filter: blur(5px); /* Blur effect */
+  z-index: 999; /* Below the popup */
+}
+
+/* Forgot Password Popup */
 .forgot-password-popup {
   position: fixed;
   top: 50%;
@@ -121,8 +134,9 @@ body {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   text-align: center;
-  z-index: 1000;
+  z-index: 1000; /* Above the overlay */
 }
+
 
 .popup-content h2 {
   margin-bottom: 15px;

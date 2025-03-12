@@ -46,6 +46,26 @@ const CreateAccount = () => {
           />
         </label>
         <label>
+          Email:
+          <input
+            type="email"
+            name="email"
+            value={accountDetails.email}
+            onChange={handleInputChange}
+            required
+          />
+        </label>
+        <label>
+          Contact Number:
+          <input
+            type="tel"
+            name="contactNumber"
+            value={accountDetails.contactNumber}
+            onChange={handleInputChange}
+            required
+          />
+        </label>
+        <label>
           Role:
           <select
             name="role"
@@ -63,6 +83,7 @@ const CreateAccount = () => {
       </form>
     </div>
   );
+  
 };
 
 export default CreateAccount;
