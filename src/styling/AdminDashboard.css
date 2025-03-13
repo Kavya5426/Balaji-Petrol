@@ -27,3 +27,89 @@
 {
   margin-right: 10px;
 }
+
+
+.dashboard-container {
+  display: flex;
+  flex-wrap: wrap; /* Adjust layout for smaller screens */
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Sidebar */
+.dashboard {
+  width: 20%;
+  margin-top: 15px;
+  background-color: #cfdbf4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  position: fixed;
+  height: 100%;
+  overflow-y: auto;
+  scrollbar-width: none; /* Hide scrollbar */
+  z-index: 1000; /* Ensure sidebar stays above content */
+  transform: translateX(-100%); /* Initially hidden */
+  transition: transform 0.3s ease-in-out;
+}
+
+.dashboard.open {
+  transform: translateX(0); /* Slide in when open */
+}
+
+#mysvg {
+  margin-right: 10px;
+}
+
+/* Sidebar Items */
+.dashboard-item {
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #bbb;
+}
+
+.dashboard-item:hover {
+  background-color: #b0c4de;
+}
+
+/* Content */
+.content {
+  flex: 1;
+  margin-left: 22%; /* Adjusted to avoid overlap */
+  padding: 20px;
+  width: 78%;
+}
+
+
+.navbar h1 {
+  font-size: 20px;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* Show only on small screens */
+  }
+
+  .dashboard {
+    width: 60%;
+  }
+
+  .content {
+    margin-left: 0; /* Prevent overlap */
+    width: 100%;
+  }
+}
