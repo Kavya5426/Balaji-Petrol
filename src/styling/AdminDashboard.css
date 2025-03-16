@@ -140,9 +140,10 @@
 
 /* Adjust Content for Sidebar */
 .content {
-  margin-left: 22%; /* Prevent overlap on large screens */
-  width: 78%;
+  margin-left: 20%;
+  width: 80%;
 }
+
 
 /* Adjust Content for Small Screens */
 @media (max-width: 768px) {
