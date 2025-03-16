@@ -21,6 +21,7 @@
   overflow-y: auto;
   scrollbar-width: none; /* Hide scrollbar */
   z-index: 1000; /* Ensure sidebar stays above content */
+  transition: transform 0.3s ease-in-out;
 }
 
 #mysvg
@@ -98,7 +99,54 @@
   cursor: pointer;
   display: none;
 }
+@media (min-width: 769px) {
+  .dashboard {
+    transform: translateX(0) !important; /* Ensures it's visible */
+  }
+}
 
+/* Hide Sidebar on Small Screens Until Opened */
+@media (max-width: 768px) {
+  .dashboard {
+    width: 60%;
+    transform: translateX(-100%);
+  }
+
+  .dashboard.open {
+    transform: translateX(0);
+    width: 60%;
+  }
+}
+
+/* Adjust Content for Sidebar */
+.content {
+  margin-left: 22%; /* Prevent overlap on large screens */
+  width: 78%;
+}
+
+/* Adjust Content for Small Screens */
+@media (max-width: 768px) {
+  .content {
+    margin-left: 0; /* Prevent overlap */
+    width: 100%;
+  }
+}
+
+/* Hamburger Menu */
+.hamburger {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Show Hamburger Only on Small Screens */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+}
 @media (max-width: 768px) {
   .hamburger {
     display: block; /* Show only on small screens */

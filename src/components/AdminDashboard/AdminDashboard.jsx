@@ -82,7 +82,8 @@ const AdminDashboard = () => {
       <Navbar />
 
       {/* Sidebar */}
-      <div className={`dashboard ${isSidebarOpen ? "open" : ""}`}>
+      <div className={`dashboard ${isSidebarOpen || window.innerWidth > 768 ? "open" : ""}`}>
+
         <h2 className="dashboard-logo">CTS</h2>
         <h2 className="dashboard-title">Dashboard</h2>
         <div className="dashboard-item" onClick={() => scrollToSection(mainPageRef)}>Home</div>
